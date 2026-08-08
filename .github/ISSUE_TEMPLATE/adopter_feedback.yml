@@ -1,0 +1,66 @@
+name: Adopter feedback
+description: Share a privacy-safe real-world evaluation or use report
+title: "[Adoption] "
+labels:
+  - adoption
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing the project. Do not include participant names, IDs, contact details, certificate files, private URLs, or registration exports. Organization and event names are optional.
+  - type: dropdown
+    id: evidence-type
+    attributes:
+      label: Evidence type
+      options:
+        - External evaluation only
+        - Real event use
+        - Repeated operational use
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version used
+      placeholder: v0.2.0
+    validations:
+      required: true
+  - type: input
+    id: scale
+    attributes:
+      label: Aggregate scale
+      description: Approximate certificate count only; no participant information.
+      placeholder: About 50 certificates
+    validations:
+      required: true
+  - type: dropdown
+    id: input-format
+    attributes:
+      label: Input format
+      options:
+        - CSV
+        - JSON
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What worked?
+      description: Describe the operational result without personal or confidential data.
+    validations:
+      required: true
+  - type: textarea
+    id: improvements
+    attributes:
+      label: What should improve?
+      description: Bugs, missing features, documentation gaps, or workflow friction.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I confirm this report contains no participant personal data or confidential event data.
+          required: true

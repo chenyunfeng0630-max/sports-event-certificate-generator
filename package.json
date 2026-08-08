@@ -1,7 +1,7 @@
 {
   "name": "sports-event-certificate-generator",
-  "version": "0.1.0",
-  "description": "Privacy-first TypeScript toolkit for generating verifiable sports event certificates from CSV data.",
+  "version": "0.2.0",
+  "description": "Privacy-first TypeScript toolkit for validating and generating verifiable sports event certificates from CSV or JSON data.",
   "keywords": [
     "certificate",
     "sports",
@@ -35,6 +35,7 @@
   "files": [
     "dist/src",
     "examples/config.json",
+    "examples/participants.json",
     "examples/sample-certificate.svg",
     "README.md",
     "README.zh-CN.md",

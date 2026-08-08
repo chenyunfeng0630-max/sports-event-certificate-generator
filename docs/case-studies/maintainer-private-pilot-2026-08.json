@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "evidenceLabel": "maintainer-run private real-event-data pilot",
+  "date": "2026-08-09",
+  "toolVersion": "0.2.0",
+  "sourceRecordCount": 252,
+  "selectedStatus": "issued",
+  "selectedRecordCount": 251,
+  "validatedCertificateCount": 251,
+  "generatedSvgCountPerRun": 251,
+  "generationRuns": 2,
+  "deterministicOutputs": true,
+  "disallowedPhoneOrGovernmentIdLeakCount": 0,
+  "reportPrivateValueLeakCount": 0,
+  "reportExcludesNamesIdsAndEventName": true,
+  "sourceUnchanged": true,
+  "artifactsRetained": false,
+  "temporaryWorkingDirectoryRemoved": true,
+  "limitations": [
+    "This is maintainer evidence, not independent adoption.",
+    "No participant data or generated certificate is published."
+  ]
+}

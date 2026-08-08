@@ -55,3 +55,24 @@ export type Manifest = {
   eventName: string;
   certificates: Array<Omit<GeneratedCertificate, "svg">>;
 };
+
+export type InputFormat = "csv" | "json";
+
+export type UsageReport = {
+  schemaVersion: 1;
+  toolVersion: string;
+  createdAt: string;
+  mode: "validate" | "generate";
+  inputFormat: InputFormat;
+  eventFingerprint: string;
+  recordCount: number;
+  certificateCount: number;
+  categoryCount: number;
+  verificationLinkCount: number;
+  outputWritten: boolean;
+  privacy: {
+    containsRecipientNames: false;
+    containsRecipientIds: false;
+    containsEventName: false;
+  };
+};
