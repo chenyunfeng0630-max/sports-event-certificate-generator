@@ -1,0 +1,59 @@
+{
+  "name": "sports-event-certificate-generator",
+  "version": "0.1.0",
+  "description": "Privacy-first TypeScript toolkit for generating verifiable sports event certificates from CSV data.",
+  "keywords": [
+    "certificate",
+    "sports",
+    "event",
+    "svg",
+    "typescript",
+    "cli"
+  ],
+  "homepage": "https://github.com/chenyunfeng0630-max/sports-event-certificate-generator#readme",
+  "bugs": {
+    "url": "https://github.com/chenyunfeng0630-max/sports-event-certificate-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenyunfeng0630-max/sports-event-certificate-generator.git"
+  },
+  "license": "MIT",
+  "author": "chenyunfeng0630-max",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "bin": {
+    "sport-cert": "./dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "examples/config.json",
+    "examples/sample-certificate.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "security:check": "node scripts/check-sensitive.mjs",
+    "example": "npm run build && node dist/src/cli.js generate --input examples/participants.csv --config examples/config.json --out examples/output --overwrite",
+    "verify": "npm run typecheck && npm test && npm run security:check && node scripts/pack-dry-run.mjs",
+    "prepublishOnly": "npm run verify"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

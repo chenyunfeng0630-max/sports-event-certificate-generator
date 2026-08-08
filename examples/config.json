@@ -1,0 +1,15 @@
+{
+  "eventName": "Open Community Games 2026",
+  "issuer": "Open Sports Foundation",
+  "title": "Certificate of Achievement",
+  "subtitle": "Celebrating participation, progress, and sportsmanship",
+  "issueDate": "2026-08-08",
+  "locale": "en",
+  "idPrefix": "OCG",
+  "namespace": "open-community-games-2026",
+  "theme": {
+    "primary": "#12355b",
+    "accent": "#e08d2d",
+    "background": "#f7f4ec"
+  }
+}

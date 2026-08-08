@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1131" viewBox="0 0 1600 1131" role="img" aria-labelledby="certificate-title certificate-description">
+  <title id="certificate-title">Certificate of Achievement — Sample Athlete</title>
+  <desc id="certificate-description">Open Community Games 2026: Gold Medal</desc>
+  <rect width="1600" height="1131" fill="#f7f4ec"/>
+  <path d="M0 0 H1600 V150 C1290 58 1100 220 780 120 C460 20 260 170 0 76 Z" fill="#12355b"/>
+  <path d="M0 1131 H1600 V1008 C1280 1095 1090 935 770 1032 C450 1129 250 978 0 1050 Z" fill="#12355b"/>
+  <circle cx="180" cy="210" r="112" fill="#e08d2d" opacity="0.13"/>
+  <circle cx="1430" cy="910" r="150" fill="#e08d2d" opacity="0.10"/>
+  <rect x="56" y="56" width="1488" height="1019" rx="28" fill="none" stroke="#e08d2d" stroke-width="4"/>
+  <rect x="78" y="78" width="1444" height="975" rx="22" fill="none" stroke="#12355b" stroke-width="2" opacity="0.35"/>
+  <g font-family="Inter, &quot;Noto Sans CJK SC&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif">
+    <text x="800" y="248" text-anchor="middle" font-size="72" font-weight="850" fill="#12355b">Certificate of Achievement</text>
+    <text x="800" y="304" text-anchor="middle" font-size="28" font-weight="600" fill="#5f6b7a">Celebrating participation, progress, and sportsmanship</text>
+    <text x="800" y="380" text-anchor="middle" font-size="36" font-weight="700" fill="#172033">Open Community Games 2026</text>
+    <text x="800" y="454" text-anchor="middle" font-size="25" font-weight="650" fill="#5f6b7a">Presented to</text>
+    <text x="800" y="548" text-anchor="middle" font-size="76" font-weight="850" fill="#12355b">Sample Athlete</text>
+    <path d="M390 575 H1210" stroke="#e08d2d" stroke-width="4" stroke-linecap="round"/>
+
+    <text x="800" y="635" text-anchor="middle" font-size="26" font-weight="650" fill="#5f6b7a">Achievement</text>
+    <text x="800" y="687" text-anchor="middle" font-size="44" font-weight="750" fill="#172033">Gold Medal</text>
+
+    <text x="800" y="730" text-anchor="middle" font-size="26" font-weight="650" fill="#5f6b7a">Category</text>
+    <text x="800" y="782" text-anchor="middle" font-size="44" font-weight="750" fill="#172033">Open Division</text>
+
+    <text x="800" y="850" text-anchor="middle" font-size="26" font-weight="650" fill="#5f6b7a">Event date</text>
+    <text x="800" y="902" text-anchor="middle" font-size="44" font-weight="750" fill="#172033">2026-08-08</text>
+    <text x="210" y="965" font-size="23" font-weight="650" fill="#5f6b7a">Certificate No.: OCG-CCA78064C583</text>
+    <text x="1390" y="925" text-anchor="end" font-size="24" font-weight="700" fill="#172033">Open Sports Foundation</text>
+    <path d="M1040 944 H1390" stroke="#5f6b7a" stroke-width="2" opacity="0.55"/>
+    <text x="1390" y="978" text-anchor="end" font-size="21" fill="#5f6b7a">Issued: 2026-08-08</text>
+    <rect x="480" y="974" width="640" height="48" rx="24" fill="#f7f4ec" opacity="0.94"/>
+    <text x="800" y="1006" text-anchor="middle" font-size="20" fill="#5f6b7a">https://example.org/certificates/athlete-001</text>
+  </g>
+</svg>
