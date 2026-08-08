@@ -6,7 +6,7 @@
 
 [English](README.md) | **简体中文**
 
-一个隐私优先的 TypeScript 工具包与命令行程序，用 CSV 批量生成可访问、可核验的体育赛事 SVG 证书。证书编号可重复计算，文件名、清单和控制台日志不会包含获奖者姓名。
+一个隐私优先的 TypeScript 工具包与命令行程序，用 CSV 或 JSON 校验并批量生成可访问、可核验的体育赛事 SVG 证书。证书编号可重复计算；文件名、清单、控制台日志和匿名使用报告不会包含获奖者姓名。
 
 ![由虚构示例生成的证书](examples/sample-certificate.svg)
 
@@ -20,6 +20,8 @@
 - 自动进行 XML 转义和 HTTPS 核验链接校验；
 - 主动拒绝手机号、邮箱、地址、身份证号、密码、Token 和 Secret 等字段；
 - 文件名、清单和控制台不写入获奖者姓名；
+- 支持 JSON 输入，以及不生成证书文件的 `validate` 和 `--dry-run`；
+- 匿名使用报告只含数量与赛事指纹，不含姓名、参与者编号或赛事名称；
 - 默认禁止覆盖已有文件；
 - 包含自动化测试、CI、CodeQL 和敏感信息检查。
 
@@ -45,6 +47,17 @@ node dist/src/cli.js generate \
   --out ./generated
 ```
 
+只校验、不生成证书文件：
+
+```bash
+node dist/src/cli.js validate \
+  --input ./participants.json \
+  --config ./config.json \
+  --report ./usage-report.json
+```
+
+也可以使用 `generate --dry-run`。如果连匿名报告文件也不希望写入，则省略 `--report`。
+
 ## CSV 格式
 
 必填字段：
@@ -61,6 +74,27 @@ node dist/src/cli.js generate \
 recipientId,recipientName,achievement,category,eventDate,verificationUrl
 athlete-001,示例运动员,体育精神奖,青少年组,2026-08-08,https://example.org/certificates/athlete-001
 ```
+
+## JSON 格式
+
+JSON 输入是一个数组，字段要求与 CSV 相同：
+
+```json
+[
+  {
+    "recipientId": "athlete-001",
+    "recipientName": "示例运动员",
+    "achievement": "金牌",
+    "category": "青少年组"
+  }
+]
+```
+
+未知字段会被拒绝，避免误把完整报名表及其额外个人信息传给生成器。
+
+## 匿名使用报告
+
+在 `validate`、`generate --dry-run` 或 `generate` 后添加 `--report usage-report.json`。报告只记录工具版本、汇总数量、输入格式、是否写出证书和确定性的赛事指纹；不会记录赛事名称、参与者姓名、参与者编号或证书内容。
 
 ## 配置文件
 
@@ -92,11 +126,13 @@ athlete-001,示例运动员,体育精神奖,青少年组,2026-08-08,https://exam
 
 ## 当前状态
 
-`v0.1.0` 是首个公开版本。在 `v1.0.0` 前 API 仍可能调整，但确定性编号和隐私保护会保持为核心兼容目标。参见[路线图](ROADMAP.md)与[更新记录](CHANGELOG.md)。
+`v0.2.0` 新增 JSON 输入、无输出校验与匿名汇总使用报告。在 `v1.0.0` 前 API 仍可能调整，但确定性编号和隐私保护会保持为核心兼容目标。参见[路线图](ROADMAP.md)、[更新记录](CHANGELOG.md)与[采用指南](docs/adoption.md)。
+
+`v0.2.0` 候选包已使用受保护的真实赛事记录完成一次[维护者私密试运行](docs/case-studies/maintainer-private-pilot-2026-08.md)，共校验并生成 251 份证书。它属于维护者证据，不代表外部采用。
 
 ## 参与贡献
 
-欢迎提交 Issue 和 Pull Request。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)并遵守[社区行为准则](CODE_OF_CONDUCT.md)。
+欢迎提交 Issue、真实使用反馈和 Pull Request。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)，使用 adopter feedback 表单时不要附加参与者数据，并遵守[社区行为准则](CODE_OF_CONDUCT.md)。
 
 ## 许可证
 

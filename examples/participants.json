@@ -1,0 +1,17 @@
+[
+  {
+    "recipientId": "athlete-003",
+    "recipientName": "Jordan Lee",
+    "achievement": "Silver Medal",
+    "category": "Open Division",
+    "eventDate": "2026-08-08",
+    "verificationUrl": "https://example.org/certificates/athlete-003"
+  },
+  {
+    "recipientId": "athlete-004",
+    "recipientName": "示例运动员二号",
+    "achievement": "完赛证书",
+    "category": "青少年组",
+    "eventDate": "2026-08-08"
+  }
+]
